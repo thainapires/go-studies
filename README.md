@@ -10,6 +10,20 @@ Go Essentials é um repositório com exemplos de código Go com os fundamentos b
 
 <td><img src="https://img.shields.io/badge/go-%23777BB4.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go"></td>
 
+### 0. Instalar Go
+
+```wget https://go.dev/dl/go1.24.3.linux-amd64.tar.gz```
+
+```sudo rm -rf /usr/local/go```
+
+```sudo tar -C /usr/local -xzf go1.24.3.linux-amd64.tar.gz ```
+
+add this to the path:
+
+```
+export PATH=$HOME/bin:/usr/local/go/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
+```
 ### 1. Comandos
 
 ##### Build
@@ -184,3 +198,47 @@ var foo, bar = "foo", 50 //tipos diferentes em mesma linha
 fmt.Println(foo, bar)
 ```
 
+#### 2.5. Tipos e constantes
+
+Mais comuns:
+
+- bool
+- int int8 int16 int32 int64 - Inteiros positivos e negativos
+- uint uint8 uint16 uint32 uint64 uintptr - Inteiros somente positivos
+- byte (Mesmo que um uint8)
+- rune (Mesmo que um int32) - Normalmente representa caractere
+- float32 float64 - Ponto flutuante
+- complex64 complex128 - Complexos
+- string
+
+Conversão
+
+```
+var x int = 65
+f := float64(x)
+fmt.Println(f)
+```
+Conversão rara de acontecer
+
+```
+var y int = 10084
+s := string(y)
+fmt.Println(s)
+```
+
+Conversão de int para string
+
+```
+s2 := strconv.FormatInt(int64(y), 10)
+fmt.Println(s2)
+```
+
+Constantes
+
+```
+const g int = 10 // Não precisa ser utilizada (pode ser runa, byte, string, bool, numéricos)
+//g := 10 não pode encurtar
+const h = 10
+//takeInt32(g) //Não funciona
+takeInt64(h) //vai assumir o tipo necessário pelo contexto
+```
