@@ -1,10 +1,10 @@
 <h3 align="center">
-  ⚡ Projeto: Go Essentials
+  ⚡ Projeto: Go Studies
 </h3>
 
 ## :rocket: Sobre o projeto
 
-Go Essentials é um repositório com exemplos de código Go com os fundamentos básicos de Go.
+Go Essentials é um repositório para documentar minha jornada de aprendizado na linguagem go
 
 ## :computer: Tecnologias utilizadas
 
